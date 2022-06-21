@@ -23,7 +23,24 @@ function City_ValidCheck(para) {
 //emojis[getRandomInt(emojis.length)]
   }
 }
+function ISP_ValidCheck(para) {
+  if(para) {
+  return para
+  } else
+  {
+  return isp0
+//emojis[getRandomInt(emojis.length)]
+  }
+}
 
+function Area_check(para) {
+  if(para=="中华民国"){
+  return "台湾"
+  } else
+  {
+  return para
+  }
+}
 
 var body = $response.body;
 var obj = JSON.parse(body);
