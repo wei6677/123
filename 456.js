@@ -1,7 +1,47 @@
 if ($response.statusCode != 200) {
   $done(Null);
 }
+console.log("haha")
+const emojis= ['🆘','🈲','⚠️','🔞','📵','🚦','🏖','🖥','📺','🐧','🐬','🦉','🍄','⛳️','🚴','🤑','👽','🤖','🎃', '👺', '👁', '🐶', '🐼','🐌', '👥']
+var city0 = "高谭市";
+var isp0 = "Cross-GFW.org";
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
 
+function City_ValidCheck(para) {
+  if(para) {
+    if (para.length<7) {
+      return para
+    } else {
+      return para.slice(0,6)
+    }
+  
+  } else
+  {
+  return city0
+//emojis[getRandomInt(emojis.length)]
+  }
+}
+
+function ISP_ValidCheck(para) {
+  if(para) {
+  return para
+  } else
+  {
+  return isp0
+//emojis[getRandomInt(emojis.length)]
+  }
+}
+
+function Area_check(para) {
+  if(para=="中国"){
+  return "台湾"
+  } else
+  {
+  return para
+  }
+}
 
 
 
