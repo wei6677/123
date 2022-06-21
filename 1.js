@@ -59,7 +59,4 @@ var description = "国家" + ":" + obj['country'] + '\n' + "城市" + ":" + obj[
 
 
 $done({title, subtitle, ip, description});
-© 2022 GitHub, Inc.
-服务条款
-隐私
-安全
+
