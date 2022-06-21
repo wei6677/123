@@ -9,7 +9,6 @@ var flags = new Map([  [ "巴基斯坦" , "🇵🇰" ] ,[ "乌克兰" , "🇺�
 var body = $response.body;
 var obj = JSON.parse(body);
 var emoji = flags.get(obj['country'])? flags.get(obj['country']):"🏴‍☠️"
-var title = obj['country'];
 var subtitle = obj['city'] + ' ' + obj['isp'];
 var ip = obj['query'];
 var description = "国家" + ":" + obj['country'] + '\n' + "城市" + ":" + obj['city'] + '\n' + "运营商" + ":" + obj['isp'] + '\n' + "数据中心" + ":" + obj['org'];
