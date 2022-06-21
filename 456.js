@@ -3,13 +3,13 @@ if ($response.statusCode != 200) {
 }
 
 console.log("haha")
-
 const emojis= ['🆘','🈲','⚠️','🔞','📵','🚦','🏖','🖥','📺','🐧','🐬','🦉','🍄','⛳️','🚴','🤑','👽','🤖','🎃', '👺', '👁', '🐶', '🐼','🐌', '👥']
 var city0 = "高谭市";
 var isp0 = "Cross-GFW.org";
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
+
 
 function City_ValidCheck(para) {
   if(para) {
@@ -34,10 +34,12 @@ var flags = new Map([  [ "巴基斯坦" , "🇵🇰" ] ,[ "乌克兰" , "🇺�
 var body = $response.body;
 var obj = JSON.parse(body);
 var emoji = flags.get(obj['country'])? flags.get(obj['country']):"🏴‍☠️"
-emoji=City_ValidCheck(obj['city']) == "香港"? "🇭🇰️":emoji
+emoji=City_ValidCheck(obj['city']) == "香港"? "🇭🇰️":emoji 
+emoji=City_ValidCheck(obj['city']) == "澳门"? "️🇲🇴️":emoji
+emoji=City_ValidCheck(obj['city']) == "台湾"? "️️🇨🇳":emoji
 
 var title = emoji + "" + '「'+ City_ValidCheck(obj['city'])+"」";//+Area_check(obj['country']);
-var subtitle = obj['country'];
+var subtitle = " ™"+ " ➠ "+obj['country'];
 var ip = obj['query'];
 var description = "国家" + ":" + obj['country'] + '\n' + "城市" + ":" + obj['city'] + '\n' + "运营商" + ":" + obj['isp'] + '\n' + "IP地址" + ":" + obj['query'];
 $done({title, subtitle, ip, description});
