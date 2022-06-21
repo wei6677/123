@@ -13,13 +13,7 @@ function City_ValidCheck(para) {
       return para.slice(0,6)
     }
   
-  } else
-  {
-  return city0
-//emojis[getRandomInt(emojis.length)]
-  }
-}
-
+  
 
 
 
