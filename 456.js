@@ -19,15 +19,7 @@ function City_ValidCheck(para) {
   }
 }
 
-function ISP_ValidCheck(para) {
-  if(para) {
-  return para
-  } else
-  {
-  return isp0
-//emojis[getRandomInt(emojis.length)]
-  }
-}
+
 
 function Area_check(para) {
   if(para=="中华民国"){
@@ -47,5 +39,5 @@ emoji=City_ValidCheck(obj['city']) == "香港"? "🇭🇰️":emoji
 var title = emoji + "" + '「'+ City_ValidCheck(obj['city'])+"」";//+Area_check(obj['country']);
 var subtitle = obj['country'];
 var ip = obj['query'];
-var description = "国家" + ":" + obj['country'] + '\n' + "城市" + ":" + obj['city'] + '\n' + "运营商" + ":" + obj['isp'] + '\n' + "数据中心" + ":" + obj['org'];
+var description = "国家" + ":" + obj['country'] + '\n' + "城市" + ":" + obj['city'] + '\n' + "运营商" + ":" + obj['isp'] + '\n' + "IP地址" + ":" + obj['query'];
 $done({title, subtitle, ip, description});
