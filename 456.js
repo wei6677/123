@@ -23,6 +23,24 @@ function City_ValidCheck(para) {
 //emojis[getRandomInt(emojis.length)]
   }
 }
+function ISP_ValidCheck(para) {
+  if(para) {
+  return para
+  } else
+  {
+  return isp0
+//emojis[getRandomInt(emojis.length)]
+  }
+}
+
+function Area_check(para) {
+  if(para=="中华民国"){
+  return "台湾"
+  } else
+  {
+  return para
+  }
+}
 
 
 
@@ -34,8 +52,8 @@ var emoji = flags.get(obj['country'])? flags.get(obj['country']):"🏴‍☠️"
 emoji=City_ValidCheck(obj['city']) == "香港"? "🇭🇰️":emoji
 emoji=City_ValidCheck(obj['city']) == "澳门"? "️🇲🇴️":emoji
 emoji=City_ValidCheck(obj['city']) == "台湾"? "️️🇹🇼":emoji
-var title =  emoji + "" + '「'+ City_ValidCheck(obj['city'])+"」";//+Area_check(obj['country']);
-var subtitle =  ""+ " ™"+ " ➠ "+ obj['country'];
+var title = emoji + "" + '「'+ City_ValidCheck(obj['city'])+"」";//+Area_check(obj['country']);
+var subtitle = obj['country'];
 var ip = obj['query'];
 var description = "国家" + ":" + obj['country'] + '\n' + "城市" + ":" + obj['city'] + '\n' + "运营商" + ":" + obj['isp'] + '\n' + "IP地址" + ":" + obj['query'];
 
