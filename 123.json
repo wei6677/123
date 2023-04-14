@@ -18,4 +18,4 @@
       "detailxl": "//*[@id=&&&y-playList&&&]/div/span/text()",
       "detailjs": "//a/span/text()",
       "detailjsurl": "//a/@href"
-    },]
+    }]
